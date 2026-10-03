@@ -1,0 +1,5 @@
+name: Globals
+values:
+  - key: host
+    value: ''
+    enabled: true
