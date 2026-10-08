@@ -101,7 +101,7 @@ const loginUser = asyncHandler(async (req, res) => {
     user._id,
   );
 
-  const loggedInUser = await user
+  const loggedInUser = await User
     .findById(user._id)
     .select("-password -refreshToken");
 
@@ -118,7 +118,7 @@ const loginUser = asyncHandler(async (req, res) => {
       new ApiResponse(
         200,
         { user: loggedInUser, accessToken, refreshToken },
-        "user logges in succesfully",
+        "user logged in succesfully",
       ),
     );
 });
@@ -147,20 +147,20 @@ const logoutUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "user logged out"));
 });
 
-const generateAccessAndRefreshToken = asyncHandler(async (req, res) => {
+const generateAccessAndRefreshToken = async (userId) => {
   try {
-    const user = await User.findById(user._id);
-    const refreshToken = uaer.generateRefreshToken();
-    const accessToken = uaer.generateAccessToken();
+    const user = await User.findById(userId);
+    const refreshToken = user.generateRefreshToken();
+    const accessToken = user.generateAccessToken();
 
     user.refreshToken = refreshToken;
     await user.save({ validateBeforeSave: false });
 
     return { accessToken, refreshToken };
   } catch (error) {
-    throw new ApiError(500, "somenthing went wrong while generating tokens");
+    throw new ApiError(500, "something went wrong while generating tokens");
   }
-});
+};
 
 const newAccessTokenGeneration = asyncHandler(async (req, res) => {
   const incomingRefreshToken =
@@ -241,7 +241,7 @@ const updateAccountDetails = asyncHandler(async (req, res) => {
     throw new ApiError(400, "all fields are required");
   }
 
-  await User.findByIdAndUpdate(
+  const user=await User.findByIdAndUpdate(
     req.user?._id,
     {
       $set: {
@@ -365,7 +365,7 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
       $lookup: {
         from: "subscriptions",
         localField: "_id",
-        foreignField: "subscriber",
+        foreignField: "subscribers",
         as: "subscribedTo",
       },
     },

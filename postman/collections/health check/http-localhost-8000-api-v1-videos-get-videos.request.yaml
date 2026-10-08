@@ -1,0 +1,6 @@
+$kind: http-request
+name: http://localhost:8000/api/v1/videos/get-videos
+description: ""
+url: http://localhost:8000/api/v1/videos/get-videos
+method: GET
+order: 1451494097213361

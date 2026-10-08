@@ -3,6 +3,10 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 const app = express();
+// app.use((req, res, next) => {
+//   console.log("APP HIT:", req.method, req.originalUrl);
+//   next();
+// });
 
 app.use(
   cors({
@@ -20,10 +24,13 @@ app.use(cookieParser());
 // import routes
 import healthCheckRouter from "./src/routes/healthCheck.routes.js"
 import userRouter from "./src/routes/user.routes.js";
+import videoRouter from "./src/routes/video.routes.js";
 
 // create routes
 app.use("/api/v1/healthCheck",healthCheckRouter)
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/videos", videoRouter);
+
 
 
 

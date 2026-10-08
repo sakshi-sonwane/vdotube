@@ -41,7 +41,7 @@ router.route("/refresh-token").post(newAccessTokenGeneration);
 router.route("/change-pwd").post(verifyJwt, changeCurrentPassword);
 
 router.route("/getCurrent-user").get(verifyJwt, getCurrentUser);
-router.route("/channel/:user").get(verifyJwt, getUserChannelProfile);
+router.route("/channel/:username").get(verifyJwt, getUserChannelProfile);
 router.route("/get-watch-history").get(verifyJwt, getWatchHistory);
 
 router.route("/update-account-details").patch(verifyJwt, updateAccountDetails);
