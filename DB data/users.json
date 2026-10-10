@@ -1,0 +1,71 @@
+{
+  "_id": {
+    "$oid": "6aca4e7101ff2880d83d4913"
+  },
+  "username": "rishu67",
+  "email": "rish67@gmail.com",
+  "fullname": "Rishu",
+  "watchHistory": [[""]],
+  "password": "$2b$10$d07t0bQD/pE8MACFKMO4M.yPTcz6wJfsYXX5WY28pOX9EUODmz9Zy",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791643247/zps5v2dtyzagbweu030y.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791643248/tqehtcgklm8e6z4lvqgi.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:40:49.842Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T14:40:49.842Z"
+  },
+  "__v": 0
+}
+
+
+
+
+{
+  "_id": {
+    "$oid": "6aca50ee01ff2880d83d4914"
+  },
+  "username": "vinit09",
+  "email": "vin333@gmail.com",
+  "fullname": "Vinit",
+  "watchHistory": [],
+  "password": "$2b$10$H6AZFzG7k2gQhMIXIT0QMOVd2nBG8bvKZ3qb3trfiF9DHSEli5iBW",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791643883/devpc7755fnvjsjeqxkv.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791643884/y5q2awc7o2bf7j2h80vo.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:51:26.391Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T15:08:41.759Z"
+  },
+  "__v": 0,
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YWNhNTBlZTAxZmYyODgwZDgzZDQ5MTQiLCJlbWFpbCI6InZpbjMzM0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InZpbml0MDkiLCJpYXQiOjE3OTE2NDQ2MzgsImV4cCI6MTc5MjA3NjYzOH0.pkMaOPorVGtKU9TDqGqJLsSQXFnldB4Buf1N20Ai3qA"
+}
+
+
+
+
+{
+  "_id": {
+    "$oid": "6aca51ad01ff2880d83d4915"
+  },
+  "username": "kirti12",
+  "email": "kirti12@gmail.com",
+  "fullname": "kirti patel",
+  "watchHistory": [
+    {
+      "$oid": "6aca4cff57a5c28ef365c6f6"
+    }
+  ],
+  "password": "$2b$10$yrFFXy6ZN5rlXjzu6hZZBOCfhg4vV9p/x71tSjkhnwEUS.NuvZw/C",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791644074/xyzwq25toua1spkeha6b.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791644075/nx5c8cn3qj0ntrvrvrta.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:54:37.101Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T15:01:41.927Z"
+  },
+  "__v": 0,
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YWNhNTFhZDAxZmYyODgwZDgzZDQ5MTUiLCJlbWFpbCI6ImtpcnRpMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJraXJ0aTEyIiwiaWF0IjoxNzkxNjQ0MTQwLCJleHAiOjE3OTIwNzYxNDB9.vOJ3MHHa9NGVFvRmogaw8BOyPRw4iuzlk6BHf6eHDCI"
+}

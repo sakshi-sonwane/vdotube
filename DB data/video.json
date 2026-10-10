@@ -1,0 +1,87 @@
+{
+  "_id": {
+    "$oid": "6ac8fff32b0add3f5efa113b"
+  },
+  "username": "amitkumarraikwar",
+  "email": "amit@gmail.com",
+  "fullname": "Amit Kumar Raikwar",
+  "watchHistory": [],
+  "password": "$2b$10$UxnofmcXsNq26haPXmrvl.VhhxX7cqD90mir2KXRx.l/KkPtzt7Gy",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791557613/ww2q4ydyvs07hyqoq9ji.svg",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791557617/t4faerzuuudajnbrky21.png",
+  "createdAt": {
+    "$date": "2026-10-09T14:53:39.382Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-09T14:53:39.382Z"
+  },
+  "__v": 0
+}
+
+
+
+
+{
+  "_id": {
+    "$oid": "6aca4b6c57a5c28ef365c6f4"
+  },
+  "username": "kirti12",
+  "email": "kirti12@gmail.com",
+  "fullname": "kirti pate",
+  "watchHistory": [],
+  "password": "$2b$10$QbOTY0FH7hcGzjpDKty27.djNDiRp3I7NN7cQIGwLocjCLSAUAlu2",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642474/te3j5qcto6lr6smajflg.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642475/snxebpudexgnngkoedji.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:27:56.461Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T14:27:56.461Z"
+  },
+  "__v": 0
+}
+
+
+
+{
+  "_id": {
+    "$oid": "6aca4c9e57a5c28ef365c6f5"
+  },
+  "username": "avni34",
+  "email": "avni10@gmail.com",
+  "fullname": "avni jain",
+  "watchHistory": [],
+  "password": "$2b$10$ErcnQKjRmf.9JLyRaYvNB.C9w9zxMOBU5lKwksG9/ymFHe1504DEK",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642779/d5uritg7wcuhfpv5rtwi.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642781/rtxmyhvv5o3seltoo1s9.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:33:02.571Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T14:33:02.571Z"
+  },
+  "__v": 0
+}
+
+
+
+
+{
+  "_id": {
+    "$oid": "6aca4cff57a5c28ef365c6f6"
+  },
+  "username": "rishu67",
+  "email": "rish67@gmail.com",
+  "fullname": "Rishu",
+  "watchHistory": [],
+  "password": "$2b$10$slu9/LEljHBfhci1aWDcnuKsX3HGHV8vk5EOcirNmwnRhTAlsGM4u",
+  "avatar": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642875/rsjvifbqaupkzvgzra07.png",
+  "coverImage": "http://res.cloudinary.com/dekfuvegv/image/upload/v1791642877/utoyyw6hsfsfji8rj0ou.png",
+  "createdAt": {
+    "$date": "2026-10-10T14:34:39.131Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-10T14:34:39.131Z"
+  },
+  "__v": 0
+}
