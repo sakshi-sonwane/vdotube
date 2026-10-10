@@ -42,7 +42,7 @@ router.route("/change-pwd").post(verifyJwt, changeCurrentPassword);
 
 router.route("/getCurrent-user").get(verifyJwt, getCurrentUser);
 router.route("/channel/:username").get(verifyJwt, getUserChannelProfile);
-router.route("/get-watch-history").get(verifyJwt, getWatchHistory);
+router.route("/get-watch-history/:user").get(verifyJwt, getWatchHistory);
 
 router.route("/update-account-details").patch(verifyJwt, updateAccountDetails);
 router

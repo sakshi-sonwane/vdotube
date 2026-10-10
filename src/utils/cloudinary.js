@@ -29,9 +29,9 @@ const removeLocalFile = (path) => {
 };
 
 const uploadOnCloudinary = async (localFilePath) => {
-  try {
-    if (!localFilePath) return null;
+  if (!localFilePath) return null; // caller checks for missing path
 
+  try {
     const uploadResult = await cloudinary.uploader.upload(localFilePath, {
       resource_type: "auto",
     });
@@ -39,12 +39,12 @@ const uploadOnCloudinary = async (localFilePath) => {
     console.log(
       "file uploaded successfully on cloudinary " + uploadResult.secure_url,
     );
-    removeLocalFile(localFilePath); // cleanup fail ho to bhi upload result return hoga
+    removeLocalFile(localFilePath);
     return uploadResult;
   } catch (error) {
     console.log("Cloudinary upload error:", error?.message || error);
     removeLocalFile(localFilePath);
-    return null;
+    throw error; // re-throw so controller gets the real failure reason
   }
 };
 

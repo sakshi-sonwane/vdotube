@@ -28,17 +28,17 @@ const registerUser = asyncHandler(async (req, res) => {
 
   console.warn(req.files);
 
+  if (!avatarLocalpath) {
+    throw new ApiError(400, "Avatar file is required");
+  }
+
   let avatar;
   try {
     avatar = await uploadOnCloudinary(avatarLocalpath);
     console.log("uploaded avatar", avatar);
   } catch (error) {
     console.log("error uploading avatar", error);
-    throw new ApiError(500, "failed to upload avatar");
-  }
-
-  if (!avatar) {
-    throw new ApiError(400, "avatar upload failed");
+    throw new ApiError(500, `Failed to upload avatar: ${error.message}`);
   }
 
   // cover image upload krna

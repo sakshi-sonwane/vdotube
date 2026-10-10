@@ -2,4 +2,4 @@ $kind: http-request
 description: ""
 url: "{{vault:host  }}/api/v1/healthCheck/"
 method: GET
-order: 1790945100591
+order: 1000

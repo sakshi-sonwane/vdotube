@@ -1,5 +1,4 @@
 $kind: http-request
-name: "{{host}}/api/v1/users/registerUser"
 description: ""
 url: "{{host}}/api/v1/users/registerUser"
 method: POST
@@ -38,4 +37,4 @@ body:
         - /C:/Users/Asus1/Pictures/Screenshots/1.png
       description: ""
       disabled: false
-order: 1451494097212361
+order: 3000
