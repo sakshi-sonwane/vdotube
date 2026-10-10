@@ -37,10 +37,10 @@ const videoSchema = new Schema(
     },
     isPublished: {
       type: Boolean,
-      required: true,
+      default: true,
     },
   },
-  { timestamp: true },
+  { timestamps: true },
 );
 
 videoSchema.plugin(mongooseAggregatePaginate);
