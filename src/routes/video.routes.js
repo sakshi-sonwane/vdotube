@@ -25,7 +25,7 @@ router.route("/publish-video").post(
   publishVideo,
 );
 
-router.route("/get-videos/:videoId").get(getVideoById);
+router.route("/get-videos/:videoId").get(verifyJwt,getVideoById);
 
 router
   .route("/:videoId")

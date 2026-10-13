@@ -7,7 +7,7 @@ import {
   uploadOnCloudinary,
 } from "../utils/cloudinary.js";
 import { Video } from "../models/video.models.js";
-import { upload } from "../middlewares/multer.middleware.js";
+import { User } from "../models/user.models.js";
 
 const getAllVideos = asyncHandler(async (req, res) => {
   const { page = 1, limit = 10, query, sortBy, sortType, userId } = req.query;
@@ -108,10 +108,14 @@ const getVideoById = asyncHandler(async (req, res) => {
   }
 
   const video = await Video.findById(videoId);
+
   if (!video) {
     throw new ApiError(404, "video not found");
   }
-
+  await User.findByIdAndUpdate(req.user?._id, {
+    $addToSet: { watchHistory: videoId },
+  });
+  
   return res
     .status(200)
     .json(new ApiResponse(200, video, "video id fetched successfully"));

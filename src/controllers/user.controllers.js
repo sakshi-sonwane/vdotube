@@ -124,7 +124,7 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 const logoutUser = asyncHandler(async (req, res) => {
-  await User.findByIdAndUpdate(
+await User.findByIdAndUpdate(
     req.user._id,
     {
       $unset: {
@@ -235,9 +235,9 @@ const getCurrentUser = asyncHandler(async (req, res) => {
 });
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
-  const { fullname, email } = req.body;
+  const { fullname, email,username } = req.body;
 
-  if (!fullname || !email) {
+  if (!fullname || !email || !username) {
     throw new ApiError(400, "all fields are required");
   }
 
@@ -247,6 +247,7 @@ const updateAccountDetails = asyncHandler(async (req, res) => {
       $set: {
         fullname,
         email,
+        username
       },
     },
     { new: true },
