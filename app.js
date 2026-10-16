@@ -22,13 +22,16 @@ import healthCheckRouter from "./src/routes/healthCheck.routes.js";
 import userRouter from "./src/routes/user.routes.js";
 import videoRouter from "./src/routes/video.routes.js";
 import tweetRouter from "./src/routes/tweet.routes.js";
+import subscriptionRouter from "./src/routes/subscription.routes.js";
+import playlistRouter from "./src/routes/playlist.routes.js";
 
 // create routes
 app.use("/api/v1/healthCheck", healthCheckRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/videos", videoRouter);
 app.use("/api/v1/tweet", tweetRouter);
-
+app.use("/api/v1/subscription", subscriptionRouter);
+app.use("/api/v1/playlist", playlistRouter);
 
 // Global error handler — must be the LAST app.use()
 app.use((err, req, res, next) => {

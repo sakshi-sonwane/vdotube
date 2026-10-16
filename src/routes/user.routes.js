@@ -11,7 +11,7 @@ import {
   updateAccountDetails,
   updateCoverImage,
   updateUserAvatar,
-} from "../controllers/user.controllers.js";
+} from "../controllers/user.controller.js";
 import { Router } from "express";
 import { verifyJwt } from "../middlewares/auth.middleware.js";
 

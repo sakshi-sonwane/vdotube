@@ -5,23 +5,26 @@ const playlistSchema = new Schema({
   name: {
     type: String,
     required: true,
+    trim: true,
   },
   description: {
     type: String,
     required: true,
+    trim: true,
   },
   videos: [
     {
       type: Schema.Types.ObjectId,
-      ref: "video",
+      ref: "Video",
     },
   ],
   owner: {
     type: Schema.Types.ObjectId,
-    ref: "user",
+    ref: "User",
+    required: true,
   },
 });
 
-playlistSchema.plugin(mongooseAggregatePaginate)
+playlistSchema.plugin(mongooseAggregatePaginate);
 
 export const Playlist = mongoose.model("Playlist", playlistSchema);

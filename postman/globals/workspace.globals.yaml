@@ -3,3 +3,6 @@ values:
   - key: host
     value: ''
     enabled: true
+  - key: host-2
+    value: ''
+    enabled: true
