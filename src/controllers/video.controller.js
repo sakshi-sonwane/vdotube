@@ -107,15 +107,23 @@ const getVideoById = asyncHandler(async (req, res) => {
     throw new ApiError(400, "video id is invalid");
   }
 
-  const video = await Video.findById(videoId);
+  // views ko +1 increment karo aur updated document lo
+  const video = await Video.findByIdAndUpdate(
+    videoId,
+    {
+      $inc: { views: 1 },
+    },
+    { new: true },
+  );
 
   if (!video) {
     throw new ApiError(404, "video not found");
   }
+
   await User.findByIdAndUpdate(req.user?._id, {
     $addToSet: { watchHistory: videoId },
   });
-  
+
   return res
     .status(200)
     .json(new ApiResponse(200, video, "video id fetched successfully"));

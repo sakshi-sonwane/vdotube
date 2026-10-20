@@ -24,6 +24,11 @@ import videoRouter from "./src/routes/video.routes.js";
 import tweetRouter from "./src/routes/tweet.routes.js";
 import subscriptionRouter from "./src/routes/subscription.routes.js";
 import playlistRouter from "./src/routes/playlist.routes.js";
+import likeRouter from "./src/routes/like.routes.js";
+import commentRouter from "./src/routes/comment.routes.js";
+import dashRouter from "./src/routes/dashboard.routes..js";
+
+
 
 // create routes
 app.use("/api/v1/healthCheck", healthCheckRouter);
@@ -32,6 +37,12 @@ app.use("/api/v1/videos", videoRouter);
 app.use("/api/v1/tweet", tweetRouter);
 app.use("/api/v1/subscription", subscriptionRouter);
 app.use("/api/v1/playlist", playlistRouter);
+app.use("/api/v1/like", likeRouter);
+app.use("/api/v1/comment", commentRouter);
+app.use("/api/v1/dashboard", dashRouter);
+
+
+
 
 // Global error handler — must be the LAST app.use()
 app.use((err, req, res, next) => {
